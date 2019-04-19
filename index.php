@@ -15,7 +15,6 @@ $f3->set('DEBUG', 3);
 
 //define a default root
 $f3->route('GET /', function () {
-
     //display a view
     $view = new Template();
     echo $view->render('views/home.html');
@@ -27,17 +26,20 @@ $f3->route('GET /', function () {
 $f3->route('GET /@item', function ($f3, $params) {
     $item = $params['item'];
     switch ($item) {
-        case 'spaghetti':
-            echo "<h3>I like $item with meatballs.</h3>";
+        case 'chicken':
+            echo "<h3>Cluck</h3>";
             break;
-        case 'pizza':
-            echo "<h3>Pepperoni or veggies?</h3>";
+        case 'dog':
+            echo "<h3>Woof</h3>";
             break;
-        case 'tacos':
-            echo "<h3>We don't have $item</h3>";
+        case 'cat':
+            echo "<h3>Meow</h3>";
             break;
-        case 'bagel':
-            $f3->reroute('/breakfast');
+        case 'giraffe':
+            echo "<h3>Neck</h3>";
+            break;
+        case 'rat':
+            echo "<h3>Skurry</h3>";
             break;
         default:
             $f3->error(404);
