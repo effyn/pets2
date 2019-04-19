@@ -56,11 +56,11 @@ $f3->route('GET /order', function() {
 });
 
 //second step of order
-$f3->route('POST /order-process', function () {
+$f3->route('POST /order2', function () {
 
     //print_r($_POST);
     //save form info in session for next form
-    $_SESSION['food'] = $_POST['food'];
+    $_SESSION['animal'] = $_POST['animal'];
     $view = new Template();
     echo $view->render('views/form2.html');
 });
@@ -69,7 +69,7 @@ $f3->route('POST /order-process', function () {
 $f3->route('POST /result', function () {
 
     //save form info in session
-    $_SESSION['meal'] = $_POST['meal'];
+    $_SESSION['color'] = $_POST['color'];
 
     $view = new Template();
     echo $view->render('views/results.html');

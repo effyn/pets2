@@ -13,13 +13,15 @@
 </head>
 <body>
 
-<h1>Meal</h1>
 <!-- fat-free shortcut, could also be in regular php-->
-<h2>You ordered {{ @SESSION.food }}</h2>
 <form action="result" method="post">
-    <label for="meal">What would kind of meal do you want?</label>
-    <input type="text" id="meal" name="meal">
-    <button type="submit">Order</button>
+    <label>Color</label>
+    <select name="color">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+    <button type="submit">Submit</button>
 </form>
 
 <!-- Optional JavaScript -->
